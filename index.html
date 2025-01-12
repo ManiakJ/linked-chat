@@ -1,0 +1,36 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Połączony Czat z Twitch i YouTube</title>
+</head>
+<body>
+
+<h2 class="tw">Twitch</h2>
+<iframe id="twitchChat" 
+        src="https://www.twitch.tv/embed/nazwa_kanału/chat?parent=twoja_domena&darkpopout" 
+        allowfullscreen></iframe>
+
+<h2 class="yt">YouTube</h2>
+<iframe id="youtubeChat" 
+        src="https://www.youtube.com/live_chat?v=ID_wideo&embed_domain=twoja_domena" 
+        allowfullscreen></iframe>
+
+<script>
+    function loadChats() {
+        const twitchChatFrame = document.getElementById('twitchChat');
+        const youtubeChatFrame = document.getElementById('youtubeChat');
+
+        const twitchChannel = 'cecenomad';
+        const youtubeVideoId = '';
+
+        twitchChatFrame.src = `https://www.twitch.tv/embed/${twitchChannel}/chat?parent=${window.location.hostname}&darkpopout`;
+        youtubeChatFrame.src = `https://www.youtube.com/live_chat?v=${youtubeVideoId}&embed_domain=${window.location.hostname}`;
+    }
+
+    window.onload = loadChats;
+</script>
+
+</body>
+</html>
