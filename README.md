@@ -10,4 +10,4 @@ Następnie odpalić plik index.html oraz edytować go i wkleić w wyznaczone 
 
 Na koniec zapisać i zatwierdzić zmiany oraz poczekać około minutę aż wejdą w życie 
 
-Na końcu odświeżyć stronę 
+Na końcu odświeżyć stronę z czatami
